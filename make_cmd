@@ -1,0 +1,8 @@
+g++ -Wno-unused-result -g -O3  -fPIC -shared -msse4 -I. -I/include -I/usr/local/include -L. -L/usr/local/lib -lhashpipe -lrt -lm -c filterbank.cpp
+
+#g++ -g -O3  -fPIC -shared -msse4 -I. -I/include -I/usr/local/include -L. -L/usr/local/lib -lhashpipe -lrt -lm -c filterbank.cpp
+
+#g++ -Wno-unused-result -shared  -g -O3  -fPIC -shared -msse4 -I. -I/include -I/usr/local/include -L. -L/usr/local/lib -lhashpipe -lrt -lm TL_gpu_thread.c TL_output_thread.c TL_databuf.c TL_net_thread.c  filterbank.cpp -o TL_hashpipe.so
+
+g++ -g -O3  -fPIC -shared -msse4 -I. -I/include -I/usr/local/include -L. -L/usr/local/lib -lhashpipe -lrt -lm TL_gpu_thread.c TL_output_thread.c TL_databuf.c TL_net_thread.c  filterbank.o -o TL_hashpipe.so
+
